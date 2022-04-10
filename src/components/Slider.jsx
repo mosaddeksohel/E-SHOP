@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
@@ -29,11 +29,13 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
 `;
 
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
+  transform: translateX(0vw);
 `;
 
 const Slide = styled.div`
