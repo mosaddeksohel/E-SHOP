@@ -8,9 +8,12 @@ import LocationAltIcon from "@mui/icons-material/AddLocationAlt";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { mobile } from "../responsive";
+
 const Container = styled.div`
   display: flex;
-  /* ${mobile({ flexDirection: "column" })} */
+  margin-left: 25px;
+  justify-content: center;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -25,9 +28,11 @@ const Logo = styled.h1``;
 const Description = styled.p`
   margin: 20px 0px;
 `;
+
 const SocialContainer = styled.div`
   display: flex;
 `;
+
 const SocialIcon = styled.div`
   width: 40px;
   height: 40px;
@@ -41,29 +46,43 @@ const SocialIcon = styled.div`
 `;
 
 const Center = styled.div`
+  flex: 1;
   padding: 20px;
-`;
-const Title = styled.h3`
-  margin-bottom: 20px;
+  ${mobile({ display: "none" })}
 `;
 
-const List = styled.ui`
+const Title = styled.h3`
+  margin-bottom: 30px;
+`;
+
+const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 `;
+
 const ListItem = styled.li`
   width: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 const Right = styled.div`
+  flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#fff8f8" })}
 `;
 
-const ContactItem = styled.div``;
+const ContactItem = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+`;
+
+const Payment = styled.img`
+  width: 50%;
+`;
 
 const Footer = () => {
   return (
@@ -114,15 +133,16 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <LocationAltIcon />
-          125/6, Dhaka, Bangladesh
+          <LocationAltIcon style={{ marginRight: "10px" }} />
+          East RazaBazar, Dhaka - 1215, Bangladesh
         </ContactItem>
         <ContactItem>
-          <PhoneIcon /> +880 1254846925
+          <PhoneIcon style={{ marginRight: "10px" }} /> +880 1254846925
         </ContactItem>
         <ContactItem>
-          <EmailIcon /> support@eshop.com
+          <EmailIcon style={{ marginRight: "10px" }} /> support@eshop.com
         </ContactItem>
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
     </Container>
   );
